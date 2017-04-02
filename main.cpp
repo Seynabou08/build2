@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 	}
 
 	// GENERATING ROLE DECK
-	vector<Card*> roleDeck;
+	vector<Role*> roleDeck;
 
 	string roleNames[] = { "Contingency Planner","Dispatcher", "Medic",
 		"Operation Expert", "Quarantine Specialist", "Researcher", "Scientist" };
@@ -140,7 +140,7 @@ int main(int argc, char* argv[])
 
 		player->drawCards(picks, cardNum);
 
-		player->setRole(roleDeck.back());
+		player->setRole(*roleDeck.back());
 		roleDeck.pop_back();
 	}
 
